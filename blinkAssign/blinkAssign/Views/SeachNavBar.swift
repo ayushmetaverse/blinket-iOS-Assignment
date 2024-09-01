@@ -2,14 +2,13 @@ import SwiftUI
 
 struct SeachNavBar: View {
     
-    
     var body: some View {
         HStack {
                     Image(systemName: "arrow.left")
                         .foregroundColor(.black)
                         .padding(.trailing, 20)
 
-                    Text("Sauces and spread")
+                    Text("Grocery and Snacks")
                         .font(.headline)
                         .foregroundColor(.black)
 
@@ -28,11 +27,6 @@ struct SeachNavBar: View {
     }
 }
 
-extension UIApplication {
-    func endEditing() {
-        self.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
 
 #Preview{
     SeachNavBar()

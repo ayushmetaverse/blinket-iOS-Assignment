@@ -12,12 +12,11 @@ struct ContentView: View {
         VStack {
             SeachNavBar()
             
-           ProportionalVStacksView()
-            
+            ProportionalVStacksView()
             
             Spacer()
             
-            CompactBlinkitComponent()
+            CheckOut()
         }
         
     }

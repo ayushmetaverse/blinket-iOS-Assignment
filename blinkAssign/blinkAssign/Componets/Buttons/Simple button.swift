@@ -1,20 +1,18 @@
 import SwiftUI
 
-struct SortButton: View {
+struct SimpleButton: View {
     var title: String
-    var leftIcon: String
-    var rightIcon: String
     var backgroundColor: Color
     
     var body: some View {
         HStack {
-            Image(systemName: leftIcon)
+           
             Text(title)
-                .font(.system(size: 14, weight: .semibold)) // Blinkit-style font
-            Image(systemName: rightIcon)
+                .font(.system(size: 14, weight: .regular)) // Blinkit-style font
+            
         }
-        .padding(.horizontal, 10) // Adjusted for a more compact layout
-        .padding(.vertical, 5) // Adjusted for a more compact layout
+        .padding(.horizontal, 8) // Adjusted for a more compact layout
+        .padding(.vertical, 7) // Adjusted for a more compact layout
         .background(backgroundColor) // Set background color
         .cornerRadius(6) // Adjusted corner radius for Blinkit style
         .overlay(
@@ -24,12 +22,10 @@ struct SortButton: View {
     }
 }
 
-struct SortButton_Previews: PreviewProvider {
+struct SimpleButton_Previews: PreviewProvider {
     static var previews: some View {
-        SortButton(
-            title: "Sort",
-            leftIcon: "arrow.up.arrow.down",
-            rightIcon: "chevron.down",
+        SimpleButton(
+            title: "Imported",
             backgroundColor: Color.white
         )
         .previewLayout(.sizeThatFits)
