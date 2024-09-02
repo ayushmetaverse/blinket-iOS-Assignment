@@ -15,6 +15,10 @@ This project is a SwiftUI implementation inspired by the Blinkit app. The projec
 - iOS 15.0 or later
 - Swift 5.7 or later
 
+## Demo
+
+![App Demo](demo.gif)
+
 ## Installation
 
 1. **Clone the repository:**
