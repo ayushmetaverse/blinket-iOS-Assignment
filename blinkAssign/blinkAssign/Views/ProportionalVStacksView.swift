@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ProportionalVStacksView: View {
     @StateObject private var viewModel = ProductViewModel()
+    @State private var showShimmer = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -19,14 +20,20 @@ struct ProportionalVStacksView: View {
                             .onTapGesture {
                                 withAnimation(.linear(duration: 0.3)) {
                                     viewModel.selectedCategory = product.productType
+                                    showShimmer = true
+                                    
+                                    // Hide shimmer after 1 second
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+                                        showShimmer = false
+                                    }
                                 }
                             }
                         }
                     }
                 }
-                .frame(width: geometry.size.width * 0.15) // 15% of the screen width
+                .frame(width: geometry.size.width * 0.15)
                 
-                // Second VStack with nested HStack and VStack
+                
                 VStack(spacing: 0) {
                     HStack {
                         FilterScroll()
@@ -35,6 +42,7 @@ struct ProportionalVStacksView: View {
                     
                     VStack {
                         ProductGridView(products: viewModel.getProducts(for: viewModel.selectedCategory), vm: viewModel)
+                            .modifier(ConditionalShimmerModifier(showShimmer: showShimmer))
                     }
                     .frame(height: geometry.size.height * 0.94)
                 }
@@ -44,15 +52,20 @@ struct ProportionalVStacksView: View {
     }
 }
 
+struct ConditionalShimmerModifier: ViewModifier {
+    var showShimmer: Bool
 
+    func body(content: Content) -> some View {
+        if showShimmer {
+            content.shimmer()
+        } else {
+            content
+        }
+    }
+}
 
 struct ProportionalVStacksView_Previews: PreviewProvider {
     static var previews: some View {
         ProportionalVStacksView()
     }
 }
-
-
-
-
-

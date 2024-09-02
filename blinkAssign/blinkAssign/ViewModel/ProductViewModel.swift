@@ -10,23 +10,23 @@ class ProductViewModel: ObservableObject {
         
         // Rice
         Product(imageName: "dawat", title: "Rice", price: 500, deliveryTime: 60, quantity: 10000, productType: "Rice"),
-
+        
         // Fruits
         Product(imageName: "mangoes1", title: "Fruits", price: 1000, deliveryTime: 45, quantity: 100, productType: "Fruit"),
-
+        
         // Ice Cream
         Product(imageName: "amulic1", title: "Desert", price: 150, deliveryTime: 30, quantity: 1000, productType: "Ice Cream"),
-
+        
         // Dairy
         Product(imageName: "amulic3", title: "Dairy", price: 50, deliveryTime: 15, quantity: 500, productType: "Dairy"),
-
+        
         // Snacks
         Product(imageName: "homi1", title: "Snacks", price: 20, deliveryTime: 5, quantity: 100, productType: "Snacks"),
-
-
+        
+        
         // Flour
         Product(imageName: "ashir1", title: "Atta", price: 300, deliveryTime: 45, quantity: 5000, productType: "Flour"),
-
+        
         // Sauces
         Product(imageName: "chili1", title: "Sauce", price: 100, deliveryTime: 20, quantity: 200, productType: "Sauce")
     ]
@@ -74,27 +74,27 @@ class ProductViewModel: ObservableObject {
                 Product(imageName: "homi4", title: "Homi Snacks 4", price: 35, deliveryTime: 8, quantity: 180, productType: "Snacks"),
             ]
         case "Rice":
-                    return [
-                        Product(imageName: "dawat", title: "Daawat Basmati Rice", price: 500, deliveryTime: 60, quantity: 10000, productType: "Rice"),
-                        Product(imageName: "dawat2", title: "Dawat White Rice", price: 520, deliveryTime: 55, quantity: 11000, productType: "Rice"),
-                        Product(imageName: "dawat1", title: "Dawat Brown Rice", price: 550, deliveryTime: 65, quantity: 12000, productType: "Rice"),
-                    ]
-                case "Flour":
-                    return [
-                        Product(imageName: "ashir1", title: "Aashirvaad Atta", price: 300, deliveryTime: 45, quantity: 5000, productType: "Flour"),
-                        Product(imageName: "ashir2", title: "Pillsbury Atta", price: 280, deliveryTime: 40, quantity: 4800, productType: "Flour"),
-                        Product(imageName: "mahi2", title: "Golden Harvest Atta", price: 270, deliveryTime: 38, quantity: 4700, productType: "Flour"),
-                    ]
-                case "Sauce":
-                    return [
-                        Product(imageName: "chili1", title: "Chili Sauce", price: 100, deliveryTime: 20, quantity: 200, productType: "Sauce"),
-                        Product(imageName: "ketchup", title: "Tomato Ketchup", price: 120, deliveryTime: 25, quantity: 250, productType: "Sauce"),
-                        Product(imageName: "chili2", title: "Green Chilli Sauce", price: 150, deliveryTime: 30, quantity: 300, productType: "Sauce"),
-                    ]
-                default:
-                    return []
-                }
-            }
+            return [
+                Product(imageName: "dawat", title: "Daawat Basmati Rice", price: 500, deliveryTime: 60, quantity: 10000, productType: "Rice"),
+                Product(imageName: "dawat2", title: "Dawat White Rice", price: 520, deliveryTime: 55, quantity: 11000, productType: "Rice"),
+                Product(imageName: "dawat1", title: "Dawat Brown Rice", price: 550, deliveryTime: 65, quantity: 12000, productType: "Rice"),
+            ]
+        case "Flour":
+            return [
+                Product(imageName: "ashir1", title: "Aashirvaad Atta", price: 300, deliveryTime: 45, quantity: 5000, productType: "Flour"),
+                Product(imageName: "ashir2", title: "Pillsbury Atta", price: 280, deliveryTime: 40, quantity: 4800, productType: "Flour"),
+                Product(imageName: "mahi2", title: "Golden Harvest Atta", price: 270, deliveryTime: 38, quantity: 4700, productType: "Flour"),
+            ]
+        case "Sauce":
+            return [
+                Product(imageName: "chili1", title: "Chili Sauce", price: 100, deliveryTime: 20, quantity: 200, productType: "Sauce"),
+                Product(imageName: "ketchup", title: "Tomato Ketchup", price: 120, deliveryTime: 25, quantity: 250, productType: "Sauce"),
+                Product(imageName: "chili2", title: "Green Chilli Sauce", price: 150, deliveryTime: 30, quantity: 300, productType: "Sauce"),
+            ]
+        default:
+            return []
+        }
+    }
 }
 
 
